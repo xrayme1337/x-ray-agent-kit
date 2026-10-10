@@ -1,0 +1,20 @@
+{
+  "name": "x-ray",
+  "owner": { "name": "X-RAY", "email": "hello@x-ray.me" },
+  "metadata": {
+    "description": "X-RAY for Claude: read-only Web3 intelligence tools and analysis recipes",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "x-ray",
+      "source": { "source": "github", "repo": "xrayme1337/x-ray-agent-kit" },
+      "description": "X-RAY MCP server (actors, chains, sectors, narratives, hiring, funding, events, metrics) plus a skill with analysis recipes.",
+      "version": "0.1.0",
+      "author": { "name": "X-RAY" },
+      "homepage": "https://x-ray.me/docs/connect",
+      "category": "data",
+      "keywords": ["web3", "crypto", "defi", "hiring", "due-diligence", "market-intelligence"]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "x-ray": {
+      "type": "http",
+      "url": "https://mcp.x-ray.me"
+    }
+  }
+}

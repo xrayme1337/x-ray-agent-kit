@@ -1,0 +1,11 @@
+{
+  "name": "x-ray",
+  "version": "0.1.0",
+  "description": "X-RAY Web3 intelligence: actors, chains, sectors, narratives, hiring, funding, events and metrics (read-only, OAuth).",
+  "mcpServers": {
+    "x-ray": {
+      "httpUrl": "https://mcp.x-ray.me"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

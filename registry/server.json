@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "me.x-ray/mcp",
+  "title": "X-RAY",
+  "description": "Web3 intelligence: actors, chains, sectors, narratives, hiring, funding, events and daily metrics.",
+  "version": "0.6.0",
+  "websiteUrl": "https://x-ray.me/docs/mcp",
+  "icons": [
+    {
+      "src": "https://x-ray.me/icon-512.png",
+      "sizes": ["512x512"],
+      "mimeType": "image/png"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.x-ray.me"
+    }
+  ]
+}
