@@ -2,6 +2,8 @@
 
 [X-RAY](https://x-ray.me) maps the Web3 landscape around the organizations that build it: companies, protocols, exchanges, funds, chains and DAOs, each with hiring, funding, token and TVL metrics, GitHub activity, governance, security incidents and a dated event feed, grouped into chains, sectors and narratives.
 
+Built during the Colosseum Crypto World's Fair hackathon (October 2026) as the distribution layer for agents: the server is listed in the official MCP Registry as `me.x-ray/mcp`.
+
 This repository holds everything an agent platform needs to connect to the X-RAY MCP server:
 
 | Path | What it is |
