@@ -1,15 +1,15 @@
 # X-RAY x402 client (pay per call, no account)
 
 A small Node client for the X-RAY pay-per-call lane: every read tool of the MCP server is also served at
-`https://mcp.x-ray.me/x402/{tool}?{args}` for agents that would rather pay a fraction of a cent in USDC
+`https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/{tool}?{args}` for agents that would rather pay a fraction of a cent in USDC
 than register. The protocol is [x402 v2](https://x402.org): the first request answers `402` with the price
 and two ways to pay (USDC on Base, USDC on Solana), the client signs a payment for one of them and retries
 with the `PAYMENT-SIGNATURE` header, the server verifies and settles through the facilitator and returns
 the tool's JSON plus a `PAYMENT-RESPONSE` header with the transaction.
 
-Status: the lane is X-RAY step 8 of the hackathon build queue. Until it is live, `npm run probe` prints the
-`401` the MCP server answers today; the client itself is complete and was tested end to end against a
-mock x402 server on both networks.
+The lane is live (X-RAY step 8, 2026-10-11): `npm run probe` prints the real `402` with both payment options and the
+Bazaar discovery extension; `npm start` pays and prints the on-chain transaction. The client was also tested end to end
+against a mock x402 server on both networks. Documentation: https://x-ray.me/docs/pay-per-call.
 
 ## Run
 
@@ -44,7 +44,7 @@ const client = new x402Client()
             new ExactSvmScheme(await createKeyPairSignerFromBytes(base58.decode(process.env.TEST_WALLET_SOLANA_KEY))));
 
 const paidFetch = wrapFetchWithPayment(fetch, client);
-const res = await paidFetch("https://mcp.x-ray.me/x402/get_actor?slug=jupiter");
+const res = await paidFetch("https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/get_actor?slug=jupiter");
 console.log(res.status, decodePaymentResponseHeader(res.headers.get("PAYMENT-RESPONSE")!));
 ```
 

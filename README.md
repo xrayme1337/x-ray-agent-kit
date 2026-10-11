@@ -71,7 +71,7 @@ npx skills add xrayme1337/x-ray-agent-kit
 
 A free X-RAY account includes a 25-call trial. After the trial, tools return previews (lists cut to 3 rows, numbers hidden, `paywalled: true`); a subscription removes the limit: https://x-ray.me/settings/api. `search_entities` is always free and is not counted.
 
-Agents without an account can pay per call in USDC (Base and Solana) through the separate x402 lane, `https://mcp.x-ray.me/x402/{tool}?{args}`: the first request answers `402` with the price, an [x402](https://x402.org) client pays and retries. A ready client with both networks is in [`examples/x402-client/`](examples/x402-client/); details at https://x-ray.me/docs#pay-per-call.
+Agents without an account can pay per call in USDC (Base and Solana) through the separate x402 lane, `https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/{tool}?{args}`: the first request answers `402` with the price, an [x402](https://x402.org) client pays and retries. A ready client with both networks is in [`examples/x402-client/`](examples/x402-client/); details, live prices, the paid-calls counter and the receiving addresses at https://x-ray.me/docs/pay-per-call.
 
 ## Tools
 

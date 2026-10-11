@@ -13,7 +13,7 @@
  *   npm start -- --network both --tool get_actor --args slug=jupiter
  *
  * Keys are read from the environment only and are never printed.
- * Endpoint: https://mcp.x-ray.me/x402/{tool}?{args}  (override with X402_BASE).
+ * Endpoint: https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/{tool}?{args}  (override with X402_BASE).
  */
 import { x402Client, wrapFetchWithPayment, decodePaymentResponseHeader } from "@x402/fetch";
 import { decodePaymentRequiredHeader } from "@x402/core/http";
@@ -34,7 +34,7 @@ const NETWORKS = {
 } as const;
 type NetworkKey = keyof typeof NETWORKS;
 
-const BASE_URL = (process.env.X402_BASE ?? "https://mcp.x-ray.me/x402").replace(/\/$/, "");
+const BASE_URL = (process.env.X402_BASE ?? "https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402").replace(/\/$/, "");
 
 // ---- CLI -------------------------------------------------------------------
 function flag(name: string, fallback: string): string {
@@ -66,7 +66,7 @@ async function probe(): Promise<void> {
   }
   const text = (await res.text()).slice(0, 300);
   if (res.status === 401 || res.status === 404) {
-    console.log("  The x402 lane is not live on this host yet (X-RAY step 8 is in the build queue); the MCP server answered instead.");
+    console.log("  No 402 from this host: check X402_BASE (the lane answers 402 at https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/{tool}).");
   }
   console.log(`  body: ${text}`);
 }
