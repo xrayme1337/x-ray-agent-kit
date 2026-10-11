@@ -35,8 +35,8 @@ For a sector tree use `list_sectors()`; for chains `list_blockchains()`; actors 
 ### Who is hiring and for what
 `search_vacancies(query, chain, sector, grade, remote)` for roles; `vacancy_stats_by_sector`, `vacancy_stats_by_blockchain`, `vacancy_stats_by_grade`, `vacancy_stats_by_skill` for the distribution; `salary_stats(role, grade, location)` for pay ranges; `list_skill_clusters()` and `top_skills_for_sector(sector)` for demand. `get_vacancy(id)` and `vacancy_skills(id)` for one role.
 
-### Narratives (when available on the server, MCP 0.7+)
-`list_narratives()` for heat ranking; `get_narrative(slug, tab=overview|members|news)` for members, movers and the news feed. Narratives are phenomena (meme tokens, AI agents, RWA), not actors: a token belongs to a narrative, an actor belongs to sectors.
+### Narratives and the landscape (MCP 0.8.0)
+`list_narratives()` for the heat ranking; `get_narrative(slug, tab=overview|members|news)` for members, movers and the news feed; `get_landscape(section=overview|regime|regulation|capital|talent|security|infrastructure|geography)` for the market regime, regulation by jurisdiction, capital, talent, security and infrastructure; `list_landscape_events(kind, jurisdiction)` for market-wide events. Narratives are phenomena (meme tokens, AI agents, RWA), not actors: a token belongs to a narrative, an actor belongs to sectors.
 
 ## Conventions
 - Slugs come from `search_entities`; never invent them. Unknown slugs return the closest matches.
