@@ -1,7 +1,7 @@
 # X-RAY x402 client (pay per call, no account)
 
 A small Node client for the X-RAY pay-per-call lane: every read tool of the MCP server is also served at
-`https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/{tool}?{args}` for agents that would rather pay a fraction of a cent in USDC
+`https://mcp.x-ray.me/x402/{tool}?{args}` for agents that would rather pay a fraction of a cent in USDC
 than register. The protocol is [x402 v2](https://x402.org): the first request answers `402` with the price
 and two ways to pay (USDC on Base, USDC on Solana), the client signs a payment for one of them and retries
 with the `PAYMENT-SIGNATURE` header, the server verifies and settles through the facilitator and returns
@@ -44,7 +44,7 @@ const client = new x402Client()
             new ExactSvmScheme(await createKeyPairSignerFromBytes(base58.decode(process.env.TEST_WALLET_SOLANA_KEY))));
 
 const paidFetch = wrapFetchWithPayment(fetch, client);
-const res = await paidFetch("https://fzorkxvrcbwlrolpotkf.supabase.co/functions/v1/x402/get_actor?slug=jupiter");
+const res = await paidFetch("https://mcp.x-ray.me/x402/get_actor?slug=jupiter");
 console.log(res.status, decodePaymentResponseHeader(res.headers.get("PAYMENT-RESPONSE")!));
 ```
 

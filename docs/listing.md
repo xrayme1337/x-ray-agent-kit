@@ -1,56 +1,77 @@
-# X-RAY listing card (one text for every catalog)
+# X-RAY listing texts
 
-**Name:** X-RAY
-**Slug:** x-ray
-**Server URL:** https://mcp.x-ray.me (Streamable HTTP, OAuth 2.0 with dynamic client registration and PKCE)
-**Website:** https://x-ray.me · **Docs:** https://x-ray.me/docs/mcp · **Connect guide:** https://x-ray.me/docs/connect
-**Privacy:** https://x-ray.me/privacy · **Support:** hello@x-ray.me
-**Icon:** https://x-ray.me/icon-512.png (512×512 PNG)
-**Categories:** Data & analytics, Finance (research), Developer tools
-**Tags:** web3, crypto, defi, due-diligence, hiring, market-intelligence, blockchain, read-only
+One text for every MCP, x402 and agent catalog. Checked on 5 Nov 2026: 3,258 actors on x-ray.me (written as "3,000+"), 36 read-only tools, MCP Registry entry `me.x-ray/mcp` 0.9.2.
 
-## One-liner (≤200 characters)
+## Card
 
-Live Web3 intelligence for your agent: companies, protocols, chains, sectors and narratives with hiring, funding, token, TVL, GitHub and event data. Read-only.
+| Field | Value |
+|---|---|
+| Name | X-RAY |
+| Server URL | `https://mcp.x-ray.me` (Streamable HTTP, OAuth with dynamic client registration and PKCE, no API keys) |
+| Registry name | `me.x-ray/mcp` |
+| Pay per call | x402 v2, USDC on Base or Solana, no account: `https://mcp.x-ray.me/x402/{tool}?{args}`; discovery at `https://mcp.x-ray.me/.well-known/x402` and `https://mcp.x-ray.me/openapi.json` |
+| Website | https://x-ray.me |
+| Docs | https://x-ray.me/docs/mcp · connect any client: https://x-ray.me/docs/connect · pay per call: https://x-ray.me/docs/pay-per-call |
+| Pricing | https://x-ray.me/pricing |
+| Privacy, terms | https://x-ray.me/privacy · https://x-ray.me/terms |
+| Support | hello@x-ray.me |
+| Icon | https://x-ray.me/icon-512.png (512×512) · https://x-ray.me/icon-256.png |
+| Repository | https://github.com/xrayme1337/x-ray-agent-kit (client configs, Claude plugin, Gemini extension, skill, x402 client) |
+| Categories | Data and analytics · Finance and research · Crypto |
+| Tags | web3, crypto, defi, market-intelligence, competitive-intelligence, due-diligence, x402, read-only |
 
-(167 characters)
+## One-liner (80 characters)
 
-## Description (≤2,000 characters)
+The map of who is doing what in Web3: actors, their links and every public move.
 
-X-RAY maps the Web3 landscape around the organizations that build it. Every actor — company, protocol, exchange, fund, chain or DAO — carries live hiring data (open roles, skills, salaries), funding rounds, token and TVL metrics, GitHub activity, governance and security incidents, and a dated event feed. Actors sit in scopes (the market, a chain, a sector) and in narratives (Memecoins, AI agents, RWA, Restaking, Perp DEXs and more), each with daily metrics and feeds.
+## Short blurb (117 characters, for lists with a 120 limit)
 
-With the connector your agent can:
-• resolve a name to the right project and pull its full card in one call;
-• read what a team is building from what it hires for (roles, skills, grades, salary ranges);
-• follow the money: raises, investors, unlocks, listings, hacks, governance votes, releases;
-• compare projects side by side, or see the state of a chain, sector or narrative over 30/90 days;
-• find who is hiring across 400+ Web3 employers and 6,000+ active roles, among 3,000+ mapped actors.
+Web3 actors, their links and every public move: rounds, investors, partners, hacks, listings. OAuth or x402 per call.
 
-All tools are read-only and return JSON with a source link back to x-ray.me, so every number can be checked. Data is refreshed daily (metrics), hourly (events, roles) and continuously (news), and passes automated quality checks before it is served.
+## Description (about 1,450 characters)
 
-Sign in with your X-RAY account (free to create). A free account includes a 25-call trial; after that the tools return previews and a subscription unlocks full data. X-RAY does not hold funds, execute trades or sign transactions.
+X-RAY is Web3 with the fog of war lifted. It maps who is doing what: 3,000+ protocols, companies, funds, exchanges, chains and DAOs, each with its numbers, its links and every public move, updated every day.
 
-(≈1,480 characters)
+- Parameters: TVL, market cap, fees, open roles, commits and funding, each with its 30-day change and the actor's rank in its sector.
+- Links: investors and portfolio, co-investors, tokens, chains and sectors.
+- Moves: funding rounds, launches, listings, partnerships, hacks, governance votes, regulatory actions and hiring spikes.
+- The field: narratives with a daily heat score, the regulation that names the actor, and the market regime.
 
-## Use cases (short bullets for forms)
+Ask your agent things like:
+- "Compare Morpho, Aave and Maple on TVL, hiring and moves in the last 30 days, with dates and sources."
+- "Who co-invests most often with Blockchain Capital, and who led the latest rounds in its portfolio?"
+- "Which narratives are heating up this week, and who is in them?"
 
-- Due diligence on a protocol before an investment, partnership or job offer
-- Competitive tracking: who is hiring, raising and shipping in my sector this month
-- Chain ecosystem reports: actors, TVL, roles and events for Solana, Base, Ethereum and 90 other chains
-- Narrative heat: which themes gain tokens, builders and attention this week
-- Recruiting and compensation research across Web3 employers
+36 read-only tools. Every response links to the x-ray.me page with the same data, so any number can be checked. X-RAY does not predict, rate or advise, and it never holds funds or signs transactions.
 
-## What users need before connecting
+Access: sign in with OAuth from your client; a free account includes 25 full calls. Pro and Team plans lift the limit. Autonomous agents can skip the account and pay per call in USDC on Base or Solana over x402, from $0.001 a call. People read the whole map free at x-ray.me.
 
-An X-RAY account (free). The OAuth sign-in happens in the client; no API keys.
+## Use cases
 
-## Compliance notes (Claude directory form)
+- Due diligence on a protocol, fund or company before a deal, a listing or a partnership
+- Watching rivals or a portfolio: rounds, partners, launches, listings, hires
+- Who co-invests with whom, and who leads the next round
+- Side-by-side comparison of up to four actors, chains or sectors
+- Which narratives are heating up, and who is in them
 
-- Reads data only; no tool writes, deletes or moves assets.
-- All data is X-RAY's own (collected from public sources and processed on our infrastructure); API ownership: our own.
-- Pay-per-call for autonomous agents (x402) runs on a separate HTTP endpoint and is not part of this connector.
-- Test account for reviewers: created by the X-RAY team, with an active subscription, details supplied in the review form (never in public materials).
+## Pricing (for forms)
 
-## Short blurb (≤80 characters, for awesome lists)
+Free: every actor page on x-ray.me, watchlists, compare, 5 alerts, an MCP trial of 25 calls. Pro $199/mo: 1 seat, 5,000 MCP calls a month, CSV export, API key. Team $990/mo: 5 seats, 30,000 pooled MCP calls, shared watchlists. Enterprise from $3,000/mo: bulk export, custom actors and sources, SLA. Pay per call over x402 from $0.001, no account. Annual plans include two months free.
 
-X-RAY — read-only Web3 intelligence: actors, hiring, funding, TVL, events, narratives.
+## Entries for GitHub lists
+
+awesome-remote-mcp-servers (Finance; the description must stay under 120 characters):
+
+```markdown
+- [X-RAY](https://x-ray.me/?utm_source=awesome-remote&utm_medium=listing) `https://mcp.x-ray.me`
+  [![X-RAY MCP connector](https://glama.ai/mcp/connectors/me.x-ray/mcp/badges/score.svg)](https://glama.ai/mcp/connectors/me.x-ray/mcp)
+  🔐 - Web3 actors, their links and every public move: rounds, investors, partners, hacks, listings; or pay per call via x402.
+```
+
+Web3 and x402 lists (one line):
+
+```markdown
+- [X-RAY](https://x-ray.me) - The map of who is doing what in Web3: actors, their links and every public move. Remote MCP server (`https://mcp.x-ray.me`, OAuth) and x402 pay-per-call lane (USDC on Base and Solana).
+```
+
+Every link in a listing gets a UTM tag: `?utm_source=<catalog>&utm_medium=listing`.
