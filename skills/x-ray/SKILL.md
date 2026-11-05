@@ -7,7 +7,7 @@ description: Answer questions about Web3 companies, protocols, chains, funds, ex
 
 X-RAY (x-ray.me) maps the Web3 landscape around **actors**: companies, protocols, exchanges, funds, chains and DAOs. Every actor carries hiring (open roles, skills, salaries), funding rounds, token and TVL metrics, GitHub activity, governance, security incidents and a dated event feed. Actors sit in **scopes** (the whole market, a chain, a sector) and in **narratives** (Memecoins, AI agents, RWA, Restaking, Perp DEXs, ...). Scopes and narratives have their own daily metrics and feeds.
 
-The tools come from the X-RAY MCP server (`https://mcp.x-ray.me`, OAuth sign-in). A free account gives a 25-call trial, after which responses switch to preview mode (lists cut to 3 rows, numbers hidden, `paywalled: true`); a subscription removes the limit. When a response carries `quota`, mention remaining calls to the user; when it carries `paywalled: true`, say that the numbers need a subscription and link to https://x-ray.me/settings/api instead of guessing values.
+The tools come from the X-RAY MCP server (`https://mcp.x-ray.me`, OAuth sign-in). A free account gives a 25-call trial, after which responses switch to preview mode (lists cut to 3 rows, numbers hidden, `paywalled: true`); a subscription removes the limit. When a response carries `quota`, mention remaining calls to the user; when it carries `paywalled: true`, say that the numbers need a subscription and link to https://x-ray.me/pricing instead of guessing values.
 
 ## Resolve names first
 

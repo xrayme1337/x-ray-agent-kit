@@ -1,10 +1,23 @@
 {
   "name": "x-ray",
-  "version": "0.1.0",
-  "description": "Web3 intelligence inside Claude: actors, chains, sectors, narratives, hiring, funding, events and daily metrics from X-RAY, read-only over OAuth.",
-  "author": { "name": "X-RAY", "email": "hello@x-ray.me", "url": "https://x-ray.me" },
+  "version": "0.2.0",
+  "description": "The map of who is doing what in Web3: actors, their links and every public move. Read-only X-RAY MCP server (OAuth) plus a skill with analysis recipes.",
+  "author": {
+    "name": "X-RAY",
+    "email": "hello@x-ray.me",
+    "url": "https://x-ray.me"
+  },
   "homepage": "https://x-ray.me/docs/connect",
   "repository": "https://github.com/xrayme1337/x-ray-agent-kit",
   "license": "MIT",
-  "keywords": ["web3", "crypto", "defi", "hiring", "due-diligence", "market-intelligence", "mcp"]
+  "keywords": [
+    "web3",
+    "crypto",
+    "defi",
+    "due-diligence",
+    "market-intelligence",
+    "competitive-intelligence",
+    "x402",
+    "mcp"
+  ]
 }
