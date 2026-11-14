@@ -1,6 +1,6 @@
 # X-RAY for agents
 
-[X-RAY](https://x-ray.me) is the map of who is doing what in Web3: 3,000+ protocols, companies, funds, exchanges, chains and DAOs, each with its numbers (TVL, market cap, fees, open roles, commits, funding), its links (investors and portfolio, co-investors, tokens, chains, sectors) and every public move (rounds, launches, listings, partnerships, hacks, governance votes, regulatory actions), updated every day.
+[X-RAY](https://x-ray.me) is Web3 with the fog of war lifted. It reads the market as a board: 3,000+ protocols, companies, exchanges, funds, chains and DAOs, each with who controls it (token upgrade and owner keys, DAO quorum and timelock, multisigs), where its capital sits (treasury, lending markets, liquidity, holders), where it stands with regulators (MiCA, OFAC, SEC, Japan FSA, Korea FIU, UK Companies House), who it is tied to, and what changed on the board this turn (seven days). Every fact names its source; what no source states is reported as not read, never as zero.
 
 Built during the Colosseum Crypto World's Fair hackathon (October 2026) as the distribution layer for agents: the server is listed in the official MCP Registry as `me.x-ray/mcp`.
 
@@ -10,7 +10,7 @@ This repository holds everything an agent platform needs to connect to the X-RAY
 |---|---|
 | `.mcp.json` | MCP server config (`https://mcp.x-ray.me`, Streamable HTTP, OAuth) |
 | `.claude-plugin/` | Claude Code plugin manifest and marketplace file |
-| `skills/x-ray/SKILL.md` | Agent skill with analysis recipes (due diligence, comparison, chain and sector state, narratives, hiring) |
+| `skills/x-ray/SKILL.md` | Agent skill with analysis recipes (what changed this week, due diligence by control, capital, status and relations, comparison, chain and sector state, narratives) |
 | `gemini-extension.json`, `GEMINI.md` | Gemini CLI extension |
 | `registry/server.json` | Entry for the official MCP Registry |
 | `examples/x402-client/` | Pay-per-call test client (x402 v2, USDC on Base and Solana) |
@@ -75,7 +75,15 @@ Agents without an account can pay per call in USDC (Base and Solana) through the
 
 ## Tools
 
-36 read-only tools (server version 0.9.2, every tool with a title and `readOnlyHint`): `search_entities`, `get_actor`, `list_actors`, `compare`, `get_scope`, `get_scope_metrics`, `list_scopes`, `list_recent_events`, `list_narratives`, `get_narrative`, `get_landscape`, `get_landscape_brief`, `list_landscape_events`, `get_company`, `list_companies`, `get_company_events`, `get_company_metrics`, `list_company_blockchains`, `list_company_sectors`, `list_blockchains`, `list_sectors`, `list_skill_clusters`, `list_vacancies`, `search_vacancies`, `get_vacancy`, `vacancy_skills`, `salary_stats`, `hiring_trend`, `company_hiring_activity`, `top_hiring_companies`, `top_skills_for_company`, `top_skills_for_sector`, `vacancy_stats_by_blockchain`, `vacancy_stats_by_grade`, `vacancy_stats_by_sector`, `vacancy_stats_by_skill`. Every answer carries `source` (the X-RAY page with the same data); an unknown name returns `not found` with the three closest slugs. Full reference: https://x-ray.me/docs/mcp; install snippets for every client: https://x-ray.me/docs/connect.
+29 read-only tools (server version 1.0.2, every tool with a title and `readOnlyHint`):
+
+- The board: `get_turn`, `get_radar`, `get_board`, `get_calendar`
+- One player: `get_actor`, `get_actor_control`, `get_actor_capital`, `get_actor_status`, `get_actor_relations`, `get_actor_moves`, `get_venue_listings`, `get_company_events`, `get_company_metrics`
+- Actors and scopes: `search_entities`, `list_actors`, `compare`, `list_recent_events`, `get_scope`, `get_scope_metrics`, `list_scopes`
+- Landscape: `get_landscape`, `get_landscape_brief`, `list_landscape_events`, `list_narratives`, `get_narrative`
+- Hiring: `search_vacancies`, `get_vacancy`, `hiring_stats`, `salary_stats`
+
+Every answer carries `source` (the X-RAY page with the same data); an unknown name returns `not found` with the three closest slugs. Full reference: https://x-ray.me/docs/mcp-capabilities; install snippets for every client: https://x-ray.me/docs/connect. The x402 lane serves the same 29 tools under the same names.
 
 ## Links
 

@@ -1,7 +1,7 @@
 {
   "name": "x-ray",
-  "version": "0.2.0",
-  "description": "The map of who is doing what in Web3: actors, their links and every public move. Read-only X-RAY MCP server (OAuth) plus a skill with analysis recipes.",
+  "version": "1.0.0",
+  "description": "Web3 with the fog of war lifted: who controls each protocol, exchange, fund and DAO, where its capital sits, how it stands with regulators and what changed this turn. Read-only X-RAY MCP server (OAuth, 29 tools) plus a skill with analysis recipes.",
   "author": {
     "name": "X-RAY",
     "email": "hello@x-ray.me",
@@ -14,6 +14,8 @@
     "web3",
     "crypto",
     "defi",
+    "compliance",
+    "governance",
     "due-diligence",
     "market-intelligence",
     "competitive-intelligence",
